@@ -2,49 +2,50 @@
   <div>
     <ul id="side">
       <li>
-        <a href="#" @click="currentView='simple'">Simple map</a>
+        <a href="/" @click="currentView='simple'">Simple map</a>
       </li>
       <li>
-        <a href="#" @click="currentView='marker-popup-example'">Custom Component</a>
+        <router-link to="custom-component">Custom Component</router-link>
       </li>
-      <li>
-        <a href="#" @click="currentView='multi-map'">Two maps</a>
-      </li>
-      <li>
-        <a href="#" @click="currentView='custom-path'">Custom path</a>
-      </li>
-      <li>
-        <a href="#" @click="currentView='custom-url-params'">Custom Url Params</a>
-      </li>
-      <li>
-        <a href="#" @click="currentView='set-bounds'">Set bounds</a>
-      </li>
-      <li>
-        <a href="#" @click="currentView='example'">Some examples</a>
-      </li>
-      <li>
-        <a href="#" @click="currentView='geometry-test'">Geometry</a>
-      </li>
-      <li>
-        <a href="#" @click="currentView='popup-on-geometry-test'">Popup on Geometry</a>
-      </li>
-      <li>
-        <a href="#" @click="currentView='world-copy-jump'">Jump on World Copy</a>
-      </li>
-      <li>
-        <a href="#" @click="currentView='geo-json'">GeoJSON</a>
-      </li>
-      <li>
-        <a href="#" @click="currentView='geo-json2'">GeoJSON 2</a>
-      </li>
-      <li>
-        <a href="#" @click="currentView='wms-layers'">WMS Tile Layers</a>
-      </li>
-      <li>
-        <a href="#" @click="currentView='crs'">CRS and Image Overlay</a>
-      </li>
+      <!--<li>-->
+        <!--<a href="#" @click="currentView='multi-map'">Two maps</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a href="#" @click="currentView='custom-path'">Custom path</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a href="#" @click="currentView='custom-url-params'">Custom Url Params</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a href="#" @click="currentView='set-bounds'">Set bounds</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a href="#" @click="currentView='example'">Some examples</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a href="#" @click="currentView='geometry-test'">Geometry</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a href="#" @click="currentView='popup-on-geometry-test'">Popup on Geometry</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a href="#" @click="currentView='world-copy-jump'">Jump on World Copy</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a href="#" @click="currentView='geo-json'">GeoJSON</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a href="#" @click="currentView='geo-json2'">GeoJSON 2</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a href="#" @click="currentView='wms-layers'">WMS Tile Layers</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a href="#" @click="currentView='crs'">CRS and Image Overlay</a>-->
+      <!--</li>-->
     </ul>
-    <component id="full_div" :is="currentView"></component>
+    <router-view id="full_div"/>
+    <!--<component id="full_div" :is="currentView"></component>-->
   </div>
 </template>
 
