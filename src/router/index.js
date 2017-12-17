@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import example from '@/components/Simple';
-import MarkerPopupExample from '@/components/MarkerPopupExample';
+import example from '@/components/Example';
+import HipHopMap from '@/components/Map';
 
 
 Vue.use(Router);
@@ -14,9 +14,9 @@ export default new Router({
       component: example,
     },
     {
-      path: '/custom-component',
-      name: 'MarkerPopupExample',
-      component: MarkerPopupExample,
+      path: '/map',
+      name: 'HipHopMap',
+      component: HipHopMap,
     },
   ],
 });
