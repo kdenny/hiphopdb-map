@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import example from '@/components/Example';
-import HipHopMap from '@/components/Map';
+import HipHopMap from '@/components/Map_Raw';
 
 
 Vue.use(Router);

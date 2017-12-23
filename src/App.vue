@@ -40,20 +40,9 @@
       </b-collapse>
     </b-navbar>
 
-    <ul id="side">
-      <h1>Queens</h1>
-      <li>
-        <b-btn @click="showAlert" variant="info" class="m-1">
-          Show alert
-        </b-btn>
-      </li>
-      <li>
-        <a href="/" @click="currentView='simple'">Simple map</a>
-      </li>
-      <li>
-        <router-link to="map">Custom Component</router-link>
-      </li>
-    </ul>
+    <side_panel v-if="displaySide"></side_panel>
+
+
     <router-view id="full_div"/>
     <!--<component id="full_div" :is="currentView"></component>-->
   </div>
@@ -61,13 +50,17 @@
 
 <script>
 
+  import SidePanel from './components/leaflet/SidePanel.vue';
+
 export default {
   name: 'app',
   components: {
+    side_panel: SidePanel
   },
   data () {
     return {
-      currentView: 'simple'
+      currentView: 'simple',
+      displaySide: false
     }
   },
   methods: {

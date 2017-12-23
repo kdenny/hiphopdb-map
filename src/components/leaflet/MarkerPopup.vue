@@ -11,7 +11,8 @@ export default {
   name: 'MarkerPopup',
   components: {
     'v-marker': Vue2Leaflet.Marker,
-    'v-popup': Vue2Leaflet.Popup
+    'v-popup': Vue2Leaflet.Popup,
+    'v-icondefault': Vue2Leaflet.IconDefault
   },
   props: ['text', 'position', 'title'],
 }
